@@ -13,7 +13,7 @@ function Variants() {
       variants={myVariants}
       initial="myInitial"
       animate="myAnimate"
-      // 이전에 바로 따로 설정했던 transition 속성은 animate에 같이 넣어준다.
+      // ⭐️ 이전에 바로 따로 설정했던 transition 속성은 animate에 같이 넣어준다.
       // ❌ transition="myTransition"
     />
   );
