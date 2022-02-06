@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { css } from "@emotion/css";
 
 import Basic from "./Steps/Basic";
+import Popping from "./Steps/Popping";
 
 import "./App.css";
 
@@ -16,16 +17,17 @@ const appCSS = css`
 `;
 
 const buttonContainerCss = css`
-  margin-bottom: 20px;
+  position: absolute;
+  top: 10px;
 `;
 
-const buttonCss = css`
-  padding: 5px 10px;
+const buttonCss = (selected: boolean) => css`
+  padding: 5px 15px;
   border: none;
   border-radius: 5px;
   margin-right: 10px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: ${selected ? "1.2" : "1"}em;
   background-color: pink;
   color: teal;
   &:active {
@@ -38,25 +40,29 @@ const stepTitle = css`
   color: white;
 `;
 
-const steps = [Basic, Basic];
+const steps = [Basic, Popping];
 
 function App() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
 
   const onClickStepButton = (nextStep: number) => setStep(nextStep);
 
   return (
     <div className={appCSS}>
       <div className={buttonContainerCss}>
-        {steps.map((_, idx) => (
-          <button className={buttonCss} key={idx} onClick={() => onClickStepButton(idx)}>
-            {idx}
+        {steps.map((currentStep, idx) => (
+          <button
+            className={buttonCss(idx === step)}
+            key={idx}
+            onClick={() => onClickStepButton(idx)}
+          >
+            {currentStep.name}
           </button>
         ))}
       </div>
-      <div key={step}>
-        <h1 className={stepTitle}>{step}</h1>
-        {steps[step]()}
+      <div>
+        <h1 className={stepTitle}>{steps[step].name}</h1>
+        <React.Fragment key={step}>{steps[step]()}</React.Fragment>
       </div>
     </div>
   );
