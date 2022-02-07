@@ -8,6 +8,7 @@ import "./App.css";
 import Variants from "./Steps/Variants";
 import Variants2 from "./Steps/Variants2";
 import Gestures from "./Steps/Gestures";
+import Gestures2 from "./Steps/Gestures2";
 
 const appCSS = css`
   width: 100vw;
@@ -43,7 +44,14 @@ const stepTitle = css`
   color: white;
 `;
 
-const steps = [Basic, Popping, Variants, Variants2, Gestures];
+const steps = [
+  { component: <Basic />, name: "Basic" },
+  { component: <Popping />, name: "Popping" },
+  { component: <Variants />, name: "Variants" },
+  { component: <Variants2 />, name: "Variants2" },
+  { component: <Gestures />, name: "Gestures" },
+  { component: <Gestures2 />, name: "Gestures2" },
+];
 
 function App() {
   const [step, setStep] = useState(0);
@@ -65,7 +73,7 @@ function App() {
       </div>
       <div>
         <h1 className={stepTitle}>{steps[step].name}</h1>
-        <React.Fragment key={step}>{steps[step]()}</React.Fragment>
+        <React.Fragment key={step}>{steps[step].component}</React.Fragment>
       </div>
     </div>
   );
