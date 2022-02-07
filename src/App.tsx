@@ -7,6 +7,7 @@ import Popping from "./Steps/Popping";
 import "./App.css";
 import Variants from "./Steps/Variants";
 import Variants2 from "./Steps/Variants2";
+import Gestures from "./Steps/Gestures";
 
 const appCSS = css`
   width: 100vw;
@@ -42,7 +43,7 @@ const stepTitle = css`
   color: white;
 `;
 
-const steps = [Basic, Popping, Variants, Variants2];
+const steps = [Basic, Popping, Variants, Variants2, Gestures];
 
 function App() {
   const [step, setStep] = useState(0);
