@@ -11,6 +11,7 @@ import Gestures from "./Steps/Gestures";
 import Gestures2 from "./Steps/Gestures2";
 import MotionValues from "./Steps/MotionValues";
 import MotionValues2 from "./Steps/MotionValues2";
+import MotionValues3 from "./Steps/MotionValues3";
 
 const appCSS = css`
   width: 100vw;
@@ -55,6 +56,7 @@ const steps = [
   { component: <Gestures2 />, name: "Gestures2" },
   { component: <MotionValues />, name: "MotionValue" },
   { component: <MotionValues2 />, name: "MotionValue2" },
+  { component: <MotionValues3 />, name: "MotionValue3" },
 ];
 
 function App() {

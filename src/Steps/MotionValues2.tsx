@@ -13,7 +13,6 @@ function MotionValues2() {
 
   return (
     <>
-      <button onClick={() => xPos.set(200)}>click me</button>
       <motion.div
         style={{ x: xPos, scale: scaleByPos }}
         className={boxCss}
