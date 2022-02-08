@@ -12,10 +12,11 @@ import Gestures2 from "./Steps/Gestures2";
 import MotionValues from "./Steps/MotionValues";
 import MotionValues2 from "./Steps/MotionValues2";
 import MotionValues3 from "./Steps/MotionValues3";
+import MotionValues4 from "./Steps/MotionValues4";
 
 const appCSS = css`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,6 +58,7 @@ const steps = [
   { component: <MotionValues />, name: "MotionValue" },
   { component: <MotionValues2 />, name: "MotionValue2" },
   { component: <MotionValues3 />, name: "MotionValue3" },
+  { component: <MotionValues4 />, name: "MotionValue4" },
 ];
 
 function App() {
