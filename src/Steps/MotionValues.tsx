@@ -10,6 +10,8 @@ function MotionValues() {
     xPos.onChange(() => console.log(xPos.get()));
   }, [xPos]);
 
+  console.log("re-render");
+
   return (
     <>
       <button onClick={() => xPos.set(200)}>click me</button>

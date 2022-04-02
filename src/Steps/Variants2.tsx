@@ -32,7 +32,7 @@ const boxVariants = {
       // variants를 사용할때만 쓸 수 있는 속성
       delayChildren: 0.5,
       staggerChildren: 0.2,
-      ////
+      ///////////////////////////////////////
     },
   },
 };

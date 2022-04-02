@@ -3,7 +3,7 @@ import { boxCss } from "./commonStyle";
 
 const boxVariants = {
   hover: { scale: 1.5, rotateZ: 90 },
-  click: { scale: 1, borderRadius: "100px" },
+  click: { scale: 1, borderRadius: "50%" },
   drag: { backgroundColor: "#1f5599", transition: { duration: 1 } },
 };
 
@@ -13,7 +13,7 @@ function Gestures() {
       <motion.div
         className={boxCss}
         // whileHover={{ scale: 1.5, rotateZ: 90 }}
-        // whileTap={{ scale: 1, borderRadius: "100px" }}
+        // whileTap={{ scale: 1, borderRadius: "50%" }}
         variants={boxVariants}
         whileHover="hover"
         whileTap="click"

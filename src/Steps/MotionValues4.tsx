@@ -13,6 +13,7 @@ function MotionValues4() {
 
   useEffect(() => {
     scrollY.onChange(() => console.log(scrollY.get(), scrollYProgress.get()));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scrollY]);
 
   return (
