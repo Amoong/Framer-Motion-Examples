@@ -1,6 +1,13 @@
+import { css } from "@emotion/css";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 import { boxCss } from "./commonStyle";
+
+const buttonCss = css`
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 10px;
+`;
 
 function MotionValues() {
   // ⭐️ motionValue는 렌더링을 발생시키지 않는다.
@@ -14,7 +21,9 @@ function MotionValues() {
 
   return (
     <>
-      <button onClick={() => xPos.set(200)}>click me</button>
+      <button className={buttonCss} onClick={() => xPos.set(200)}>
+        click me
+      </button>
       <motion.div
         style={{ x: xPos }}
         className={boxCss}
