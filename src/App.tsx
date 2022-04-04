@@ -17,6 +17,8 @@ import Svg from "./Steps/Svg";
 import AnimatePresence from "./Steps/AnimatePresence";
 import Slider1 from "./Steps/Slider1";
 import Slider2 from "./Steps/Slider2";
+import Wow from "./Steps/Wow";
+import Wow2 from "./Steps/Wow2";
 
 const appCSS = css`
   width: 100vw;
@@ -40,11 +42,12 @@ const buttonCss = (selected: boolean) => css`
   margin-right: 10px;
   cursor: pointer;
   font-size: ${selected ? "1.2" : "1"}em;
-  background-color: pink;
-  color: teal;
+  background-color: ${selected ? "dodgerblue" : "pink"};
+  color: ${selected ? "gold" : "teal"};
   &:active {
     opacity: 0.8;
   }
+  margin-bottom: 10px;
 `;
 
 const stepTitle = css`
@@ -67,6 +70,8 @@ const steps = [
   { component: <AnimatePresence />, name: "AnimatePresence" },
   { component: <Slider1 />, name: "Slider1" },
   { component: <Slider2 />, name: "Slider2" },
+  { component: <Wow />, name: "Wow" },
+  { component: <Wow2 />, name: "Wow2" },
 ];
 
 function App() {
