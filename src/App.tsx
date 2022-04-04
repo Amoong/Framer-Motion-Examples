@@ -15,6 +15,8 @@ import MotionValues3 from "./Steps/MotionValues3";
 import MotionValues4 from "./Steps/MotionValues4";
 import Svg from "./Steps/Svg";
 import AnimatePresence from "./Steps/AnimatePresence";
+import Slider1 from "./Steps/Slider1";
+import Slider2 from "./Steps/Slider2";
 
 const appCSS = css`
   width: 100vw;
@@ -63,6 +65,8 @@ const steps = [
   { component: <MotionValues4 />, name: "MotionValue4" },
   { component: <Svg />, name: "Svg" },
   { component: <AnimatePresence />, name: "AnimatePresence" },
+  { component: <Slider1 />, name: "Slider1" },
+  { component: <Slider2 />, name: "Slider2" },
 ];
 
 function App() {

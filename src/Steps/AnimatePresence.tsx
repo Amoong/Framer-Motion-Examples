@@ -23,7 +23,7 @@ const boxVariants = {
     opacity: 0,
     y: 20,
     scale: 0,
-    // ⭐️ 가능
+    // ⭐️ transition 설정 가능
     // transition: {
     //   duration: 2,
     // },
