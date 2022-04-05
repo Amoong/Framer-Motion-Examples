@@ -30,13 +30,18 @@ function Wow2() {
   return (
     <div className={boxContainerCss} onClick={toggleClicked}>
       <motion.div className={cx(boxCss, centerCss)}>
-        {clicked && <motion.div className={circleCss} layoutId="circle" />}
+        {clicked && (
+          <motion.div
+            className={circleCss}
+            // layoutId="circle"
+          />
+        )}
       </motion.div>
       <motion.div className={cx(boxCss, centerCss)}>
         {!clicked && (
           <motion.div
             className={circleCss}
-            layoutId="circle"
+            // layoutId="circle"
             // style={{ scale: 2 }}
           />
         )}
