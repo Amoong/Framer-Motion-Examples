@@ -19,6 +19,7 @@ import Slider1 from "./Steps/Slider1";
 import Slider2 from "./Steps/Slider2";
 import Wow from "./Steps/Wow";
 import Wow2 from "./Steps/Wow2";
+import Modal from "./Steps/Modal";
 
 const appCSS = css`
   width: 100vw;
@@ -72,6 +73,7 @@ const steps = [
   { component: <Slider2 />, name: "Slider2" },
   { component: <Wow />, name: "Wow" },
   { component: <Wow2 />, name: "Wow2" },
+  { component: <Modal />, name: "Modal" },
 ];
 
 function App() {
